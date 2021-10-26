@@ -23,27 +23,27 @@
         <th scope="col">DNI</th>
         <th scope="col">Telefono</th>
         <th scope="col">Direcion</th>
-        <th scope="col">Roll</th>
+        <th scope="col">Distrito</th>
     
         
       </tr>
     </thead>
     <tbody>
-      <tr th:each="p : ${lstPer}">
-	       <td th:text="${p.cod_per}"></td>
-	        <td th:text="${p.nom_per}"></td>
-	        <td th:text="${p.ape_per}"></td>
-	        <td th:text="${p.fec_nac_per}"></td>
-	        <td th:text="${p.email_per}"></td>
-	        <td th:text="${p.dni_per}"></td>
-	        <td th:text="${p.tel_per}"></td>
-	        <td th:text="${p.dir_per}"></td>
-	        <td th:text="${p.cod_rol}"></td>
+      <tr th:each="cli : ${lstCli}">
+	       <td th:text="${cli.cod_cli}"></td>
+	        <td th:text="${cli.nom_cli}"></td>
+	        <td th:text="${cli.ape_cli}"></td>
+	        <td th:text="${cli.fec_nac_cli}"></td>
+	        <td th:text="${cli.email_cli}"></td>
+	        <td th:text="${cli.dni_cli}"></td>
+	        <td th:text="${cli.tel_cli}"></td>
+	        <td th:text="${cli.dir_cli}"></td>
+	        <td th:text="${cli.distrito}"></td>
 	        
 	        
 		      <td>
-			      <form action="/producto/editar" method="post">
-			       <input type="hidden" name="codigo" th:value="${p.cod_per}">
+			      <form action="/cliente/editar" method="post">
+			       <input type="hidden" name="codigo" th:value="${cli.cod_cli}">
 			       <button type="submit" class="btn bnt-info">Editar</button>
 			       </form>
 		      </td>

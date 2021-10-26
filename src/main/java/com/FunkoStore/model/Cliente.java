@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Table(name = "tb_cliente")
 public class Cliente {
 	@Id
-	private String cod_cli;
+	private int  cod_cli;
 	private String nom_cli;
 	private String ape_cli;
 	private String fec_nac_cli;
@@ -21,10 +21,11 @@ public class Cliente {
 	private String tel_cli;
 	private String dir_cli;
 	private String distrito;
-	public String getCod_cli() {
+	
+	public int getCod_cli() {
 		return cod_cli;
 	}
-	public void setCod_cli(String cod_cli) {
+	public void setCod_cli( int cod_cli) {
 		this.cod_cli = cod_cli;
 	}
 	public String getNom_cli() {

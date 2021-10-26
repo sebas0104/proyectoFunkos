@@ -1,45 +1,51 @@
 package com.FunkoStore.controller;
 
 import com.FunkoStore.model.*;
+import com.FunkoStore.repository.*;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
+
+@Controller
+@RequestMapping(path ="/cliente")
 public class ClienteController {
+	
+	@Autowired
+	private IClienteRepository repocli;
 
-	/*@GetMapping("/cargar")
+	@GetMapping("/cargar")
 	public String cargarpag(Model model) {
-		model.addAttribute("producto", new Producto());
-		model.addAttribute("lstCategorias",repoc.findAll());
-		model.addAttribute("lstProveedor",repopv.findAll());
-		return "crudproductos";
+		model.addAttribute("cliente", new Cliente());
+		return "crudCliente";
 	}
 
 
 	@PostMapping("/grabar")
-	public String grabarpag(@ModelAttribute Producto producto,Model model) {
+	public String grabarpag(@ModelAttribute Cliente cli,Model model) {
 		System.out.println("Listo para grabar ");
-		System.out.println(producto);
-		repo.save(producto);// merge
-		model.addAttribute("lstCategorias",repoc.findAll());
-		model.addAttribute("lstProveedor",repopv.findAll());
-		return "crudproductos";
+		System.out.println(cli);
+		repocli.save(cli);// merge
+		
+		return "crudCliente";
 
 	}
 
 	@GetMapping("/listar")
 	public String listadodeProductos(Model model) {
-		model.addAttribute("lstProducto",repo.findAll());
-		return "listado";
+		model.addAttribute("lstCli",repocli.findAll());
+		return "listadoCliente";
 	}
 
 	@PostMapping("/editar")
-	public String buscarProducto(@ModelAttribute Producto p, Model model) {
-		System.out.println(p);
-		model.addAttribute("producto",repo.findById(p.getCodigo()));
-		model.addAttribute("lstCategorias",repoc.findAll());
-		model.addAttribute("lstProveedor",repopv.findAll());
-		return "crudproductos";
-	}*/
+	public String buscarProducto(@ModelAttribute Cliente cli, Model model) {
+		System.out.println(cli);
+		model.addAttribute("producto",repocli.findById(cli.getCod_cli()));
+		return "crudCliente";
+	}
 }

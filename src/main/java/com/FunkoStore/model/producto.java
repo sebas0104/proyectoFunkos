@@ -12,16 +12,17 @@ import lombok.NoArgsConstructor;
 @Table(name = "tb_producto")
 public class producto {
     @Id
-	private String cod_prod;
+	private int  cod_prod;
 	private String nom_prod;
 	private String desc_prod;
-	private String cod_cat;
+	private int cod_cat;
 	private int stock;
 	private double precio;
-	public String getCod_prod() {
+	
+	public int getCod_prod() {
 		return cod_prod;
 	}
-	public void setCod_prod(String cod_prod) {
+	public void setCod_prod(int cod_prod) {
 		this.cod_prod = cod_prod;
 	}
 	public String getNom_prod() {
@@ -36,10 +37,10 @@ public class producto {
 	public void setDesc_prod(String desc_prod) {
 		this.desc_prod = desc_prod;
 	}
-	public String getCod_cat() {
+	public int getCod_cat() {
 		return cod_cat;
 	}
-	public void setCod_cat(String cod_cat) {
+	public void setCod_cat(int cod_cat) {
 		this.cod_cat = cod_cat;
 	}
 	public int getStock() {

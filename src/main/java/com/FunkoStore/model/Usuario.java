@@ -9,7 +9,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "tb_cliente")
+@Table(name = "tb_usuario")
 public class Usuario {
 	@Id
 	private String cod_per;
@@ -19,6 +19,7 @@ public class Usuario {
 	private String flg_recu;
 	private String estado;
 	private String fecha_reg;
+	
 	public String getCod_per() {
 		return cod_per;
 	}

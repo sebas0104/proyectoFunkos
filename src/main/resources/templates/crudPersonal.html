@@ -14,7 +14,7 @@
 		<h1>Mantenimiento de Personal</h1>
 		<form class="row g-3" action="/personal/grabar" method="POST" th:object="${personal}">
 			<div class="col-md-4">
-				<label for="validationDefault01" class="form-label">Codigo del Producto</label>
+				<label for="validationDefault01" class="form-label">Codigo del Personal</label>
 				<input type="text" th:field="*{cod_per}" class="form-control" id="validationDefault01"
 					placeholder="Ingrese Codigo" required>
 			</div>
@@ -27,21 +27,21 @@
 			<div class="col-md-4">
 				<label for="validationDefault03" class="form-label">Apellido</label>
 				<input type="text" th:field="*{ape_per}" min="1" class="form-control" id="validationDefault03"
-				placeholder="Ingrese Descripcion " required>
+				placeholder="Ingrese apellido " required>
 					
 			</div>
 			
 			<div class="col-md-4">
 				<label for="validationDefault03" class="form-label">Fecha</label>
 				<input type="text" th:field="*{fec_nac_per}" min="1" class="form-control" id="validationDefault03"
-				placeholder="Ingrese Descripcion " required>
+				placeholder="Ingrese fecha " required>
 					
 			</div>
 			
 				<div class="col-md-4">
 				<label for="validationDefault03" class="form-label">Email</label>
 				<input type="text" th:field="*{email_per}" min="1" class="form-control" id="validationDefault03"
-				placeholder="Ingrese Descripcion " required>
+				placeholder="Ingrese email " required>
 					
 			</div>
 			
@@ -50,7 +50,7 @@
 				<div class="col-md-4">
 				<label for="validationDefault03" class="form-label">DNI</label>
 				<input type="text" th:field="*{dni_per}" min="1" class="form-control" id="validationDefault03"
-				placeholder="Ingrese Descripcion " required>
+				placeholder="Ingrese dni" required>
 					
 			</div>
 			
@@ -58,14 +58,14 @@
 				<div class="col-md-4">
 				<label for="validationDefault03" class="form-label">Telefono</label>
 				<input type="text" th:field="*{tel_per}" min="1" class="form-control" id="validationDefault03"
-				placeholder="Ingrese Descripcion " required>
+				placeholder="Ingrese telefono " required>
 					
 			</div>
 			
 			<div class="col-md-4">
 				<label for="validationDefault03" class="form-label">Direccion</label>
 				<input type="text" th:field="*{dir_per}" min="1" class="form-control" id="validationDefault03"
-				placeholder="Ingrese Descripcion " required>
+				placeholder="Ingrese direccion " required>
 					
 			</div>
 			

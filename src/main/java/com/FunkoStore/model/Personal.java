@@ -4,16 +4,12 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "tb_personal")
-
 public class Personal {
 	@Id
-	private String cod_per;
+	private int cod_per;
 	private String nom_per;
 	private String ape_per;
 	private String fec_nac_per;
@@ -22,10 +18,11 @@ public class Personal {
 	private String tel_per;
 	private String dir_per;
 	private String cod_rol;
-	public String getCod_per() {
+	
+	public int getCod_per() {
 		return cod_per;
 	}
-	public void setCod_per(String cod_per) {
+	public void setCod_per(int cod_per) {
 		this.cod_per = cod_per;
 	}
 	public String getNom_per() {

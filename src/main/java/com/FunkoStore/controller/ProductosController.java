@@ -1,6 +1,7 @@
 package com.FunkoStore.controller;
-
 import com.FunkoStore.model.*;
+import com.FunkoStore.repository.*;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,10 +15,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class ProductosController {
 
 	@Autowired
-	private com.FunkoStore.repository.IProductoRepository repo;
+	private IProductoRepository repo;
 	
 	@Autowired
-	private com.FunkoStore.repository.ICategoriaRepository repocate;
+	private ICategoriaRepository repocate;
 	
 	
 	
@@ -41,14 +42,14 @@ public class ProductosController {
 	@GetMapping("/listar")
 	public String listadodeProductos(Model model) {
 		model.addAttribute("lstPro",repo.findAll());
-		return "listado";
+		return "listadoProductos";
 	}
 
 	@PostMapping("/editar")
 	public String buscarProducto(@ModelAttribute producto p, Model model) {
 		System.out.println(p);
 		model.addAttribute("producto",repo.findById(p.getCod_prod()));
-		//model.addAttribute("lstCa",repocate.findAll());
+		model.addAttribute("lstCa",repocate.findAll());
 		return "crudproductos";
 	}
 }

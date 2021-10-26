@@ -1,6 +1,7 @@
 package com.FunkoStore.controller;
 
 import com.FunkoStore.model.*;
+import com.FunkoStore.repository.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,10 +15,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping(path ="/personal")
 public class PersonalControler {
 	@Autowired
-	private com.FunkoStore.repository.IpersonalRepository repoper;
+	private IpersonalRepository repoper;
 	
 	@Autowired
-	private com.FunkoStore.repository.IRolRepository reporol;
+	private IRolRepository reporol;
 	
 	
 	
@@ -41,16 +42,16 @@ public class PersonalControler {
 
 @GetMapping("/listar")
 	public String listadodePersonal(Model model) {
-		model.addAttribute("lstPer",reporol.findAll());
+		model.addAttribute("lstPer",repoper.findAll());
 		return "listadoPersonal";
 	}
 
-		/*@PostMapping("/editar")
-	public String buscarProducto(@ModelAttribute Producto p, Model model) {
+	@PostMapping("/editar")
+	public String buscarPersonal(@ModelAttribute Personal p, Model model) {
 		System.out.println(p);
-		model.addAttribute("producto",repo.findById(p.getCodigo()));
-		model.addAttribute("lstCategorias",repoc.findAll());
-		model.addAttribute("lstProveedor",repopv.findAll());
+		model.addAttribute("producto",repoper.findById(p.getCod_per()));
+		model.addAttribute("lstro",reporol.findAll());
+
 		return "crudPersonal";
-	}*/
+	}
 }
