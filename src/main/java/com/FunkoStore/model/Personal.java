@@ -10,7 +10,7 @@ import javax.persistence.Table;
 @Table(name = "tb_personal")
 public class Personal {
 	@Id
-	@Column(name = "cod_per")
+	
 	private String cod_per;
 	
 	@Column(name = "nom_per")
