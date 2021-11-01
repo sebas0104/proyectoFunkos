@@ -63,7 +63,7 @@ cod_rol char(5) not null
 );
 
 create table tb_usuario(
-cod_per char(5) not null,
+cod_per int (5) not null,
 user char(10) not null,
 pass char(10) not null,
 cod_recu char(8) not null,
@@ -167,9 +167,9 @@ insert into tb_personal values(003, 'Jose', 'Medina', '1999-11-08', 'jose@gmail.
 
 
 -- insert tb_usuario
-insert into tb_usuario(cod_per, user, pass, cod_recu, flg_recu, estado) values('PE001', 'AJAVIER', '12345', 'A', '0', 'A');
-insert into tb_usuario(cod_per, user, pass, cod_recu, flg_recu, estado) values('PE002', 'SJURADO', '12345', 'A', '0', 'A');
-insert into tb_usuario(cod_per, user, pass, cod_recu, flg_recu, estado) values('PE003', 'JOSE', '12345', 'A', '0', 'A');
+insert into tb_usuario(cod_per, user, pass, cod_recu, flg_recu, estado) values(1, 'AJAVIER', '12345', 'A', '0', 'A');
+insert into tb_usuario(cod_per, user, pass, cod_recu, flg_recu, estado) values(2, 'SJURADO', '12345', 'A', '0', 'A');
+insert into tb_usuario(cod_per, user, pass, cod_recu, flg_recu, estado) values(3, 'JOSE', '12345', 'A', '0', 'A');
 
 
 -- insert tb_permiso_usuario
@@ -292,5 +292,5 @@ begin
 end $$
 DELIMITER ;
 
-select * from tb_cliente
+select * from tb_usuario
 ;

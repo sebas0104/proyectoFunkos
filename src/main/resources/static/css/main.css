@@ -1,0 +1,20 @@
+@charset "ISO-8859-1";
+/*Estilos GENERALES*/
+
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f6f5f7;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/img/banner.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+

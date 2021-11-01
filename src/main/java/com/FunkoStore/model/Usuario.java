@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Table(name = "tb_usuario")
 public class Usuario {
 	@Id
-	private String cod_per;
+	private int cod_per;
 	private String user;
 	private String pass;
 	private String cod_recu;
@@ -20,10 +20,10 @@ public class Usuario {
 	private String estado;
 	private String fecha_reg;
 	
-	public String getCod_per() {
+	public int getCod_per() {
 		return cod_per;
 	}
-	public void setCod_per(String cod_per) {
+	public void setCod_per(int cod_per) {
 		this.cod_per = cod_per;
 	}
 	public String getUser() {
