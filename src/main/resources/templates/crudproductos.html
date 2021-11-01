@@ -16,18 +16,18 @@
 		<form class="row g-3" action="/producto/grabar" method="POST" th:object="${producto}">
 			<div class="col-md-4">
 				<label for="validationDefault01" class="form-label">Codigo del Producto</label>
-				<input type="text" th:field="*{cod_prod}" class="form-control" id="validationDefault01"
+				<input type="text" th:field="*{idproducto}" class="form-control" id="validationDefault01"
 					placeholder="Ingrese Codigo" required>
 			</div>
 			<div class="col-md-4">
 				<label for="validationDefault02" class="form-label">Nonbres</label>
-				<input type="text" th:field="*{nom_prod}" class="form-control" id="validationDefault02"
+				<input type="text" th:field="*{nombrepro}" class="form-control" id="validationDefault02"
 					placeholder="Ingrese nombre " required>
 			</div>
 
 			<div class="col-md-4">
 				<label for="validationDefault03" class="form-label">Descripcion</label>
-				<input type="text" th:field="*{desc_prod}" min="1" class="form-control" id="validationDefault03"
+				<input type="text" th:field="*{descripcionpro}" min="1" class="form-control" id="validationDefault03"
 				placeholder="Ingrese Descripcion " required>
 					
 			</div>

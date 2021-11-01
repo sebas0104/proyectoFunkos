@@ -30,20 +30,20 @@
     </thead>
     <tbody>
       <tr th:each="cli : ${lstCli}">
-	       <td th:text="${cli.cod_cli}"></td>
-	        <td th:text="${cli.nom_cli}"></td>
-	        <td th:text="${cli.ape_cli}"></td>
-	        <td th:text="${cli.fec_nac_cli}"></td>
-	        <td th:text="${cli.email_cli}"></td>
-	        <td th:text="${cli.dni_cli}"></td>
-	        <td th:text="${cli.tel_cli}"></td>
-	        <td th:text="${cli.dir_cli}"></td>
-	        <td th:text="${cli.distrito}"></td>
+	       <td th:text="${cli.idcliente}"></td>
+	        <td th:text="${cli.nombrecli}"></td>
+	        <td th:text="${cli.apellidocli}"></td>
+	        <td th:text="${cli.fechacli}"></td>
+	        <td th:text="${cli.correocli}"></td>
+	        <td th:text="${cli.dnicli}"></td>
+	        <td th:text="${cli.telefonocli}"></td>
+	        <td th:text="${cli.direccioncli}"></td>
+	        <td th:text="${cli.distritocli}"></td>
 	        
 	        
 		      <td>
 			      <form action="/cliente/editar" method="post">
-			       <input type="hidden" name="codigo" th:value="${cli.cod_cli}">
+			       <input type="hidden" name="codigo" th:value="${cli.idcliente}">
 			       <button type="submit" class="btn bnt-info">Editar</button>
 			       </form>
 		      </td>
