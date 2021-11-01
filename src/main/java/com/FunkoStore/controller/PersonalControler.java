@@ -49,7 +49,7 @@ public class PersonalControler {
 	@PostMapping("/editar")
 	public String buscarPersonal(@ModelAttribute Personal p, Model model) {
 		System.out.println(p);
-		model.addAttribute("producto",repoper.findById(p.getCod_per()));
+		//model.addAttribute("producto",repoper.findById(p.getCod_per()));
 		model.addAttribute("lstro",reporol.findAll());
 
 		return "crudPersonal";

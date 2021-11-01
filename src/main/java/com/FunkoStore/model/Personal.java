@@ -1,5 +1,6 @@
 package com.FunkoStore.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -9,76 +10,114 @@ import javax.persistence.Table;
 @Table(name = "tb_personal")
 public class Personal {
 	@Id
-	private int cod_per;
-	private String nom_per;
-	private String ape_per;
-	private String fec_nac_per;
-	private String email_per;
-	private String dni_per;
-	private String tel_per;
-	private String dir_per;
-	private String cod_rol;
+	@Column(name = "cod_per")
+	private String cod_per;
 	
-	public int getCod_per() {
+	@Column(name = "nom_per")
+	private String nombreper;
+	
+	@Column(name = "ape_per")
+	private String apellidoper;
+	
+	@Column(name = "fec_nac_per")
+	private String fechaper;
+	
+	@Column(name = "email_per")
+	private String correoper;
+	
+	@Column(name = "cod_per")
+	private String dniper;
+	
+	@Column(name = "tel_per")
+	private String telfonoper;
+	
+	@Column(name = "dir_per")
+	private String direcionper;
+	
+	@Column(name = "cod_rol")
+	private String idrol;
+
+	public String getCod_per() {
 		return cod_per;
 	}
-	public void setCod_per(int cod_per) {
+
+	public void setCod_per(String cod_per) {
 		this.cod_per = cod_per;
 	}
-	public String getNom_per() {
-		return nom_per;
+
+	public String getNombreper() {
+		return nombreper;
 	}
-	public void setNom_per(String nom_per) {
-		this.nom_per = nom_per;
+
+	public void setNombreper(String nombreper) {
+		this.nombreper = nombreper;
 	}
-	public String getApe_per() {
-		return ape_per;
+
+	public String getApellidoper() {
+		return apellidoper;
 	}
-	public void setApe_per(String ape_per) {
-		this.ape_per = ape_per;
+
+	public void setApellidoper(String apellidoper) {
+		this.apellidoper = apellidoper;
 	}
-	public String getFec_nac_per() {
-		return fec_nac_per;
+
+	public String getFechaper() {
+		return fechaper;
 	}
-	public void setFec_nac_per(String fec_nac_per) {
-		this.fec_nac_per = fec_nac_per;
+
+	public void setFechaper(String fechaper) {
+		this.fechaper = fechaper;
 	}
-	public String getEmail_per() {
-		return email_per;
+
+	public String getCorreoper() {
+		return correoper;
 	}
-	public void setEmail_per(String email_per) {
-		this.email_per = email_per;
+
+	public void setCorreoper(String correoper) {
+		this.correoper = correoper;
 	}
-	public String getDni_per() {
-		return dni_per;
+
+	public String getDniper() {
+		return dniper;
 	}
-	public void setDni_per(String dni_per) {
-		this.dni_per = dni_per;
+
+	public void setDniper(String dniper) {
+		this.dniper = dniper;
 	}
-	public String getTel_per() {
-		return tel_per;
+
+	public String getTelfonoper() {
+		return telfonoper;
 	}
-	public void setTel_per(String tel_per) {
-		this.tel_per = tel_per;
+
+	public void setTelfonoper(String telfonoper) {
+		this.telfonoper = telfonoper;
 	}
-	public String getDir_per() {
-		return dir_per;
+
+	public String getDirecionper() {
+		return direcionper;
 	}
-	public void setDir_per(String dir_per) {
-		this.dir_per = dir_per;
+
+	public void setDirecionper(String direcionper) {
+		this.direcionper = direcionper;
 	}
-	public String getCod_rol() {
-		return cod_rol;
+
+	public String getIdrol() {
+		return idrol;
 	}
-	public void setCod_rol(String cod_rol) {
-		this.cod_rol = cod_rol;
+
+	public void setIdrol(String idrol) {
+		this.idrol = idrol;
 	}
+
 	@Override
 	public String toString() {
-		return "Personal [cod_per=" + cod_per + ", nom_per=" + nom_per + ", ape_per=" + ape_per + ", fec_nac_per="
-				+ fec_nac_per + ", email_per=" + email_per + ", dni_per=" + dni_per + ", tel_per=" + tel_per
-				+ ", dir_per=" + dir_per + ", cod_rol=" + cod_rol + "]";
+		return "Personal [cod_per=" + cod_per + ", nombreper=" + nombreper + ", apellidoper=" + apellidoper
+				+ ", fechaper=" + fechaper + ", correoper=" + correoper + ", dniper=" + dniper + ", telfonoper="
+				+ telfonoper + ", direcionper=" + direcionper + ", idrol=" + idrol + "]";
 	}
+
+	
+	
 	
 	
 }

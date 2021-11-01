@@ -45,7 +45,7 @@ public class ClienteController {
 	@PostMapping("/editar")
 	public String buscarProducto(@ModelAttribute Cliente cli, Model model) {
 		System.out.println(cli);
-		model.addAttribute("producto",repocli.findById(cli.getCod_cli()));
+		model.addAttribute("producto",repocli.findById(cli.getIdcliente()));
 		return "crudCliente";
 	}
 }

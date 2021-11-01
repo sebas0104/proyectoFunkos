@@ -15,32 +15,32 @@
 		<form class="row g-3" action="/cliente/grabar" method="POST" th:object="${cliente}">
 			<div class="col-md-4">
 				<label for="validationDefault01" class="form-label">Codigo del Cliente</label>
-				<input type="text" th:field="*{cod_cli}" class="form-control" id="validationDefault01"
+				<input type="text" th:field="*{idcliente}" class="form-control" id="validationDefault01"
 					placeholder="Ingrese Codigo" required>
 			</div>
 			<div class="col-md-4">
 				<label for="validationDefault02" class="form-label">Nonbres</label>
-				<input type="text" th:field="*{nom_cli}" class="form-control" id="validationDefault02"
+				<input type="text" th:field="*{nombrecli}" class="form-control" id="validationDefault02"
 					placeholder="Ingrese nombre " required>
 			</div>
 
 			<div class="col-md-4">
 				<label for="validationDefault03" class="form-label">Apellido</label>
-				<input type="text" th:field="*{ape_cli}" min="1" class="form-control" id="validationDefault03"
+				<input type="text" th:field="*{apellidocli}" min="1" class="form-control" id="validationDefault03"
 				placeholder="Ingrese Descripcion " required>
 					
 			</div>
 			
 			<div class="col-md-4">
 				<label for="validationDefault03" class="form-label">Fecha</label>
-				<input type="text" th:field="*{fec_nac_cli}" min="1" class="form-control" id="validationDefault03"
+				<input type="text" th:field="*{fechacli}" min="1" class="form-control" id="validationDefault03"
 			 required>
 					
 			</div>
 			
 				<div class="col-md-4">
 				<label for="validationDefault03" class="form-label">Email</label>
-				<input type="text" th:field="*{email_cli}" min="1" class="form-control" id="validationDefault03"
+				<input type="text" th:field="*{correocli}" min="1" class="form-control" id="validationDefault03"
 				placeholder="Ingrese correo" required>
 					
 			</div>
@@ -49,7 +49,7 @@
 			
 				<div class="col-md-4">
 				<label for="validationDefault03" class="form-label">DNI</label>
-				<input type="text" th:field="*{dni_cli}" min="1" class="form-control" id="validationDefault03"
+				<input type="text" th:field="*{dnicli}" min="1" class="form-control" id="validationDefault03"
 				placeholder="Ingrese dni " required>
 					
 			</div>
@@ -57,21 +57,21 @@
 			
 				<div class="col-md-4">
 				<label for="validationDefault03" class="form-label">Telefono</label>
-				<input type="text" th:field="*{tel_cli}" min="1" class="form-control" id="validationDefault03"
+				<input type="text" th:field="*{telefonocli}" min="1" class="form-control" id="validationDefault03"
 				placeholder="Ingrese telefono " required>
 					
 			</div>
 			
 			<div class="col-md-4">
 				<label for="validationDefault03" class="form-label">Direccion</label>
-				<input type="text" th:field="*{dir_cli}" min="1" class="form-control" id="validationDefault03"
+				<input type="text" th:field="*{direccioncli}" min="1" class="form-control" id="validationDefault03"
 				placeholder="Ingrese Direccion " required>
 					
 			</div>
 			
 			<div class="col-md-4">
 				<label for="validationDefault03" class="form-label">Distrito</label>
-				<input type="text" th:field="*{distrito}" min="1" class="form-control" id="validationDefault03"
+				<input type="text" th:field="*{distritocli}" min="1" class="form-control" id="validationDefault03"
 				placeholder="Ingrese Distrito " required>
 					
 			</div>

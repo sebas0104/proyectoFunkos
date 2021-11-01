@@ -48,7 +48,7 @@ public class ProductosController {
 	@PostMapping("/editar")
 	public String buscarProducto(@ModelAttribute producto p, Model model) {
 		System.out.println(p);
-		model.addAttribute("producto",repo.findById(p.getCod_prod()));
+		//model.addAttribute("producto",repo.findById(p.getCod_prod()));
 		model.addAttribute("lstCa",repocate.findAll());
 		return "crudproductos";
 	}
