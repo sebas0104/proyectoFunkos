@@ -29,7 +29,7 @@ estado char(1) not null
 );
 
 create table tb_categoria(
-cod_cat int(5) not null,
+cod_cat varchar(5) not null,
 nom_cat varchar(50) not null,
 desc_cat varchar(100) not null
 );
@@ -195,7 +195,7 @@ insert into tb_cliente values(10, 'Andrea', 'Castro','2000-05-12','CLI10@hotmail
 
 
 -- insert tb_categoria
-insert into tb_categoria values(01, 'Marvel', 'Superheroes');
+insert into tb_categoria values(01, "Marvel", 'Superheroes');
 insert into tb_categoria values(02, 'Naruto', 'Nijas');
 insert into tb_categoria values(03, 'Dragon BAll', 'Guerreros Z');
 insert into tb_categoria values(04, 'DC', 'Superheroes');

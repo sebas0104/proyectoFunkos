@@ -34,12 +34,12 @@
 			
 			<div class="col-md-4">
 				<label for="validationDefault04" class="form-label">Categoria</label>
-				<select class="form-select" th:field="*{cod_cat}" id="validationDefault04" required>
+				<select class="form-select" th:field="*{idcategoria}" id="validationDefault04" required>
 					<option selected disabled th:value="-1" th:text="Seleccione"></option>
 					
 					 <option th:each="c : ${lstCa}"
-					 th:value="${c.cod_cat}" 
-					 th:text="${c.nom_cat}"
+					 th:value="${c.idcategoria}" 
+					 th:text="${c.descripcion}"
 					 ></option> 
 			
 					
@@ -49,13 +49,13 @@
 			
 			<div class="col-md-5">
 				<label for="validationDefault03" class="form-label">Stock</label>
-				<input type="number" th:field="*{stock}"   min="1" class="form-control" id="validationDefault03"
+				<input type="number" th:field="*{stockpro}"   min="1" class="form-control" id="validationDefault03"
 					placeholder="0" required>
 			</div>
 			
 				<div class="col-md-6">
 				<label for="validationDefault03" class="form-label">Precio</label>
-				<input type="number" th:field="*{precio}" step="0.01"  min="1" class="form-control" id="validationDefault03"
+				<input type="number" th:field="*{preciopro}" step="0.01"  min="1" class="form-control" id="validationDefault03"
 					placeholder="0.00" required>
 			</div>
 			

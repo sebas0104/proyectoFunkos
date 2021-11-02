@@ -27,16 +27,16 @@
     </thead>
     <tbody>
       <tr th:each="p : ${lstPro}">
-	        <td th:text="${p.cod_prod}"></td>
-	        <td th:text="${p.nom_prod}"></td>
-	        <td th:text="${p.desc_prod}"></td>
-	        <td th:text="${p.cod_cat}"></td>
-	        <td th:text="${p.stock}"></td>
-	        <td th:text="${p.precio}"></td>
+	        <td th:text="${p.idproducto}"></td>
+	        <td th:text="${p.nombrepro}"></td>
+	        <td th:text="${p.descripcionpro}"></td>
+	        <td th:text="${p.idcategoria}"></td>
+	        <td th:text="${p.stockpro}"></td>
+	        <td th:text="${p.preciopro}"></td>
 	        
 		      <td>
 			      <form action="/producto/editar" method="post">
-			       <input type="hidden" name="codigo" th:value="${p.cod_prod}">
+			       <input type="hidden" name="codigo" th:value="${p.idproducto}">
 			       <button type="submit" class="btn bnt-info">Editar</button>
 			       </form>
 		      </td>
