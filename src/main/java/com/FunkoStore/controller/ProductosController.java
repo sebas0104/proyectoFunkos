@@ -41,7 +41,6 @@ public class ProductosController {
 
 	@GetMapping("/listar")
 	public String listadodeProductos(Model model) {
-		System.out.println("hola");
 		model.addAttribute("lstPro",repo.findAll());
 		return "listadoProductos";
 	}
