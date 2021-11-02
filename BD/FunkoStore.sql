@@ -63,13 +63,13 @@ cod_rol char(5) not null
 );
 
 create table tb_usuario(
-cod_per char(5) not null,
-user char(10) not null,
-pass char(10) not null,
-cod_recu char(8) not null,
-flg_recu char(1) not null,
-estado char(1) not null,
-fecha_reg datetime default now()
+cod_usua  int auto_increment,
+nom_usua varchar(15),
+ape_usua varchar(25),
+usr_usua char(45) NOT NULL unique,
+cla_usua char(100),
+fna_usua  date  null,
+primary key (cod_usua)
 );
 
 create table tb_boleta(
@@ -125,7 +125,6 @@ alter table tb_personal add constraint PK_tb_personal_cod_per primary key (cod_p
 
 alter table tb_personal add constraint FK_tb_personal_cod_rol foreign key (cod_rol) references tb_rol (cod_rol);
 
-alter table tb_usuario add constraint CHK_tb_usuario_flg_recu check (flg_recu in('1', '0'));
 
 
 
@@ -167,9 +166,9 @@ insert into tb_personal values('003', 'Jose', 'Medina', '1999-11-08', 'jose@gmai
 
 
 -- insert tb_usuario
-insert into tb_usuario(cod_per, user, pass, cod_recu, flg_recu, estado) values('PE001', 'AJAVIER', '12345', 'A', '0', 'A');
-insert into tb_usuario(cod_per, user, pass, cod_recu, flg_recu, estado) values('PE002', 'SJURADO', '12345', 'A', '0', 'A');
-insert into tb_usuario(cod_per, user, pass, cod_recu, flg_recu, estado) values('PE003', 'JOSE', '12345', 'A', '0', 'A');
+insert into tb_usuario values (null,'Admin', 'Admin','admin@hotmail.com', 'admin', curdate());
+
+
 
 
 -- insert tb_permiso_usuario
