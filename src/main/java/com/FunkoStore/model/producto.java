@@ -1,5 +1,6 @@
 package com.FunkoStore.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -12,54 +13,78 @@ import lombok.NoArgsConstructor;
 @Table(name = "tb_producto")
 public class producto {
     @Id
-	private int  cod_prod;
-	private String nom_prod;
-	private String desc_prod;
-	private int cod_cat;
-	private int stock;
-	private double precio;
+    @Column(name = "cod_prod")
+	private int  idproducto;
+    
+    @Column(name = "nom_prod")
+	private String nombrepro;
+    
+    @Column(name = "desc_prod")
+	private String descripcionpro;
+    
+    @Column(name = "cod_cat")
+	private int idcategoria;
+    
+    @Column(name = "stock")
+	private int stockpro;
 	
-	public int getCod_prod() {
-		return cod_prod;
+    @Column(name = "precio")
+	private double preciopro;
+
+	public int getIdproducto() {
+		return idproducto;
 	}
-	public void setCod_prod(int cod_prod) {
-		this.cod_prod = cod_prod;
+
+	public void setIdproducto(int idproducto) {
+		this.idproducto = idproducto;
 	}
-	public String getNom_prod() {
-		return nom_prod;
+
+	public String getNombrepro() {
+		return nombrepro;
 	}
-	public void setNom_prod(String nom_prod) {
-		this.nom_prod = nom_prod;
+
+	public void setNombrepro(String nombrepro) {
+		this.nombrepro = nombrepro;
 	}
-	public String getDesc_prod() {
-		return desc_prod;
+
+	public String getDescripcionpro() {
+		return descripcionpro;
 	}
-	public void setDesc_prod(String desc_prod) {
-		this.desc_prod = desc_prod;
+
+	public void setDescripcionpro(String descripcionpro) {
+		this.descripcionpro = descripcionpro;
 	}
-	public int getCod_cat() {
-		return cod_cat;
+
+	public int getIdcategoria() {
+		return idcategoria;
 	}
-	public void setCod_cat(int cod_cat) {
-		this.cod_cat = cod_cat;
+
+	public void setIdcategoria(int idcategoria) {
+		this.idcategoria = idcategoria;
 	}
-	public int getStock() {
-		return stock;
+
+	public int getStockpro() {
+		return stockpro;
 	}
-	public void setStock(int stock) {
-		this.stock = stock;
+
+	public void setStockpro(int stockpro) {
+		this.stockpro = stockpro;
 	}
-	public double getPrecio() {
-		return precio;
+
+	public double getPreciopro() {
+		return preciopro;
 	}
-	public void setPrecio(double precio) {
-		this.precio = precio;
+
+	public void setPreciopro(double preciopro) {
+		this.preciopro = preciopro;
 	}
+
 	@Override
 	public String toString() {
-		return "producto [cod_prod=" + cod_prod + ", nom_prod=" + nom_prod + ", desc_prod=" + desc_prod + ", cod_cat="
-				+ cod_cat + ", stock=" + stock + ", precio=" + precio + "]";
+		return "producto [idproducto=" + idproducto + ", nombrepro=" + nombrepro + ", descripcionpro=" + descripcionpro
+				+ ", idcategoria=" + idcategoria + ", stockpro=" + stockpro + ", preciopro=" + preciopro + "]";
 	}
+	
 	
 	
 

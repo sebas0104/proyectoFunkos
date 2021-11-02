@@ -1,5 +1,6 @@
 package com.FunkoStore.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -79,6 +80,5 @@ public class Personal {
 				+ fec_nac_per + ", email_per=" + email_per + ", dni_per=" + dni_per + ", tel_per=" + tel_per
 				+ ", dir_per=" + dir_per + ", cod_rol=" + cod_rol + "]";
 	}
-	
 	
 }

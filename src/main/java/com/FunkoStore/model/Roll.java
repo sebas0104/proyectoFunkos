@@ -1,5 +1,6 @@
 package com.FunkoStore.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -8,28 +9,46 @@ import javax.persistence.Table;
 @Table(name = "tb_rol")
 public class Roll {
 	@Id
-	private String cod_rol;
-	private String nom_rol ;
-	private String desc_rol;
+	@Column(name = "cod_rol")
+	private String idrol;
+	
+	@Column(name = "nom_rol")
+	private String nombrerol ;
+	
+	@Column(name = "desc_rol")
+	private String descricionrol;
 
-	public String getCod_rol() {
-		return cod_rol;
+	public String getIdrol() {
+		return idrol;
 	}
-	public void setCod_rol(String cod_rol) {
-		this.cod_rol = cod_rol;
+
+	
+	public void setIdrol(String idrol) {
+		this.idrol = idrol;
 	}
-	public String getNom_rol() {
-		return nom_rol;
+
+	public String getNombrerol() {
+		return nombrerol;
 	}
-	public void setNom_rol(String nom_rol) {
-		this.nom_rol = nom_rol;
+
+	public void setNombrerol(String nombrerol) {
+		this.nombrerol = nombrerol;
 	}
-	public String getDesc_rol() {
-		return desc_rol;
+
+	public String getDescricionrol() {
+		return descricionrol;
 	}
-	public void setDesc_rol(String desc_rol) {
-		this.desc_rol = desc_rol;
+
+	public void setDescricionrol(String descricionrol) {
+		this.descricionrol = descricionrol;
 	}
+
+
+	@Override
+	public String toString() {
+		return "Roll [idrol=" + idrol + ", nombrerol=" + nombrerol + ", descricionrol=" + descricionrol + "]";
+	}
+	
 	
 
 }

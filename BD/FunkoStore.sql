@@ -29,7 +29,7 @@ estado char(1) not null
 );
 
 create table tb_categoria(
-cod_cat int(5) not null,
+cod_cat varchar(5) not null,
 nom_cat varchar(50) not null,
 desc_cat varchar(100) not null
 );
@@ -51,7 +51,7 @@ desc_rol varchar(100) not null
 );
 
 create table tb_personal(
-cod_per int(5) not null,
+cod_per char(5) not null,
 nom_per varchar(50) not null,
 ape_per varchar(50) not null,
 fec_nac_per date not null,
@@ -161,9 +161,9 @@ insert into tb_rol values('ROL02', 'Vendedor', 'Encargado solo de vender');
 
 
 -- insert tb_personal 
-insert into tb_personal values(001, 'Alvaro James Anthony', 'Javier Reyes', '2001-11-08', 'anthony.tnt.024@gmail.com', '74543018', '928317977', 'Av. Benavides 1223, Primer Piso', 'ROL01');
-insert into tb_personal values(002, 'Sunny', 'Jurado', '1999-11-08', 'sunny@gmail.com', '15975364', '987654321', 'Av. Benavides 1223, Primer Piso', 'ROL02');
-insert into tb_personal values(003, 'Jose', 'Medina', '1999-11-08', 'jose@gmail.com', '45678908', '951357456', 'Av. Benavides 1223, Primer Piso', 'ROL01');
+insert into tb_personal values('001', 'Alvaro James Anthony', 'Javier Reyes', '2001-11-08', 'anthony.tnt.024@gmail.com', '74543018', '928317977', 'Av. Benavides 1223, Primer Piso', 'ROL01');
+insert into tb_personal values('002', 'Sunny', 'Jurado', '1999-11-08', 'sunny@gmail.com', '15975364', '987654321', 'Av. Benavides 1223, Primer Piso', 'ROL02');
+insert into tb_personal values('003', 'Jose', 'Medina', '1999-11-08', 'jose@gmail.com', '45678908', '951357456', 'Av. Benavides 1223, Primer Piso', 'ROL01');
 
 
 -- insert tb_usuario
@@ -195,7 +195,7 @@ insert into tb_cliente values(10, 'Andrea', 'Castro','2000-05-12','CLI10@hotmail
 
 
 -- insert tb_categoria
-insert into tb_categoria values(01, 'Marvel', 'Superheroes');
+insert into tb_categoria values(01, "Marvel", 'Superheroes');
 insert into tb_categoria values(02, 'Naruto', 'Nijas');
 insert into tb_categoria values(03, 'Dragon BAll', 'Guerreros Z');
 insert into tb_categoria values(04, 'DC', 'Superheroes');

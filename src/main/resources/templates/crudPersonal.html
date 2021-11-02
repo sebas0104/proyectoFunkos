@@ -1,17 +1,21 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 
-<head>
-	<title>Getting Started: Serving Web Content</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<head th:replace="principal::head">
 </head>
 
-<body>
 
-	<div class="container">
-		<h1>Mantenimiento de Personal</h1>
+
+<body>
+	<div id="container">
+
+		<header th:replace="principal::header"> </header>
+		<main>
+			<nav th:replace="principal::nav"></nav>
+			<section style="width: 65%; float: left;">
+				<!-- el  cuerpo -->
+				<h1>Mantenimiento de Personal</h1>
 		<form class="row g-3" action="/personal/grabar" method="POST" th:object="${personal}">
 			<div class="col-md-4">
 				<label for="validationDefault01" class="form-label">Codigo del Personal</label>
@@ -75,8 +79,8 @@
 					<option selected disabled th:value="-1" th:text="Seleccione"></option>
 					
 					 <option th:each="r : ${lstro}"
-					 th:value="${r.cod_rol}" 
-					 th:text="${r.nom_rol}"
+					 th:value="${r.idrol}" 
+					 th:text="${r.nombrerol}"
 					 ></option> 
 			
 				</select>
@@ -90,6 +94,12 @@
 			</div>
 
 		</form>
+			</section>
+
+
+
+		</main>
+		<footer th:replace="principal::footer"> </footer>
 	</div>
 
 </body>
