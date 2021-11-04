@@ -200,12 +200,12 @@ insert into tb_categoria values(04, 'DC', 'Superheroes');
 
 
 -- insert tb_producto
-insert into tb_producto values( 01, 'FUNKO Capitan America',1,'2000','70.00');
+insert into tb_producto values( 01, 'FUNKO Capitan America','Superheroes',1,'2000','70.00');
 insert into tb_producto values(02, 'FUNKO Iron Man', 'Superheroes',1,'2000','70.00');
 insert into tb_producto values( 03, 'FUNKO Spiderman', 'Superheroes',1,'2000','70.00');
 insert into tb_producto values( 04, 'FUNKO Naruto', 'Nijas',2,'20','70.00');
 insert into tb_producto values(05, 'FUNKO Sasuke', 'Nijas',2,'2000','70.00');
-insert into tb_producto values(06, 'FUNKO Sakura', 'Nijas','70.00');   
+insert into tb_producto values(06, 'FUNKO Sakura', 'Nijas',2,'2000','70.00');   
 insert into tb_producto values( 07, 'FUNKO Goku', 'Guerreros Z',3,'20','70.00');
 insert into tb_producto values(08, 'FUNKO Gohan', 'Guerreros Z',3,'2000','70.00');
 insert into tb_producto values(09, 'FUNKO Vegeta', 'Guerreros Z',3,'20','70.00');
