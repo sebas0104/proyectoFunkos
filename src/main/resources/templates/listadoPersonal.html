@@ -30,20 +30,20 @@
     </thead>
     <tbody>
       <tr th:each="p : ${lstPer}">
-	       <td th:text="${p.cod_per}"></td>
-	        <td th:text="${p.nom_per}"></td>
-	        <td th:text="${p.ape_per}"></td>
-	        <td th:text="${p.fec_nac_per}"></td>
-	        <td th:text="${p.email_per}"></td>
-	        <td th:text="${p.dni_per}"></td>
-	        <td th:text="${p.tel_per}"></td>
-	        <td th:text="${p.dir_per}"></td>
-	        <td th:text="${p.cod_rol}"></td>
+	       <td th:text="${p.idpersonal}"></td>
+	        <td th:text="${p.nombreper}"></td>
+	        <td th:text="${p.apellidoper}"></td>
+	        <td th:text="${p.fechaper}"></td>
+	        <td th:text="${p.emailper}"></td>
+	        <td th:text="${p.dniper}"></td>
+	        <td th:text="${p.telefonoper}"></td>
+	        <td th:text="${p.direccionper}"></td>
+	        <td th:text="${p.idrol}"></td>
 	        
 	        
 		      <td>
 			      <form action="/personal/editar" method="post">
-			       <input type="hidden" name="codigo" th:value="${p.cod_per}">
+			       <input type="hidden" name="idpersonal" th:value="${p.idpersonal}">
 			       <button type="submit" class="btn bnt-info">Editar</button>
 			       </form>
 		      </td>

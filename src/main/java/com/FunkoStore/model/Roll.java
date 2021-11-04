@@ -16,7 +16,7 @@ public class Roll {
 	private String nombrerol ;
 	
 	@Column(name = "desc_rol")
-	private String descricionrol;
+	private String descripcionrol;
 
 	public String getIdrol() {
 		return idrol;
@@ -36,17 +36,17 @@ public class Roll {
 	}
 
 	public String getDescricionrol() {
-		return descricionrol;
+		return descripcionrol;
 	}
 
-	public void setDescricionrol(String descricionrol) {
-		this.descricionrol = descricionrol;
+	public void setDescricionrol(String descripcionrol) {
+		this.descripcionrol = descripcionrol;
 	}
 
 
 	@Override
 	public String toString() {
-		return "Roll [idrol=" + idrol + ", nombrerol=" + nombrerol + ", descricionrol=" + descricionrol + "]";
+		return "Roll [idrol=" + idrol + ", nombrerol=" + nombrerol + ", descripcionrol=" + descripcionrol + "]";
 	}
 	
 	

@@ -35,7 +35,7 @@ public class ProductosController {
 		System.out.println("Listo para grabar ");
 		System.out.println(producto);
 		repo.save(producto);// merge
-		model.addAttribute("lstCategorias",repocate.findAll());
+		model.addAttribute("lstCa",repocate.findAll());
 		return "crudproductos";
 	}
 
@@ -44,11 +44,12 @@ public class ProductosController {
 		model.addAttribute("lstPro",repo.findAll());
 		return "listadoProductos";
 	}
-
+		
+	
 	@PostMapping("/editar")
 	public String buscarProducto(@ModelAttribute producto p, Model model) {
 		System.out.println(p);
-		//model.addAttribute("producto",repo.findById(p.getCod_prod()));
+		model.addAttribute("producto",repo.findById(p.getIdproducto()));
 		model.addAttribute("lstCa",repocate.findAll());
 		return "crudproductos";
 	}

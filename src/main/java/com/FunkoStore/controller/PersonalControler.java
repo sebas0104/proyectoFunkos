@@ -49,9 +49,8 @@ public class PersonalControler {
 	@PostMapping("/editar")
 	public String buscarPersonal(@ModelAttribute Personal p, Model model) {
 		System.out.println(p);
-		model.addAttribute("personal",repoper.findById(p.getCod_per()));
+		model.addAttribute("personal",repoper.findById(p.getIdpersonal()));
 		model.addAttribute("lstro",reporol.findAll());
-
 		return "crudPersonal";
 	}
 }
