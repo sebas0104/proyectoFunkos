@@ -6,11 +6,15 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet"  href="/css/login.css" >
 </head>
 
 <body>
-	<div style="margin-left: 20%; width: 60%;">
-		<h2>Acceso al sistema</h2>
+	<div >
+	<header >
+			<img alt="logo" th:src="@{/img/FunkoStore.png}" style="margin-left: 30%" >
+			
+		</header>
 		<form action="/login/validar" method="post" th:object="${usuario}">
 
 			<div class="form-group">
@@ -22,16 +26,17 @@
 				<label for="inputAddress2">Contraseña</label>
 				<input type="password" th:field="*{clave}" class="form-control" id="inputAddress2"
 					placeholder="Ingrese contraseña">
-			</div>
+					</div>
+		
 
 
 			<button type="submit" class="btn btn-primary">Ingresar</button>
+				
 		</form>
+		</div>
 		<br>
 		<div class="alert alert-danger" role="alert" th:if="${mensaje}" th:text="${mensaje}">
 		</div>
-
-	</div>
 </body>
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

@@ -51,6 +51,18 @@ public class ProductosController {
 		System.out.println(p);
 		model.addAttribute("producto",repo.findById(p.getIdproducto()));
 		model.addAttribute("lstCa",repocate.findAll());
-		return "crudproductos";
+		return "actualizarproductos";
+	}
+	
+	
+	@PostMapping("/eliminar")
+	public String eliminarlibro(@ModelAttribute producto p,Model model) {
+		System.out.println("Listo para eliminar ");
+		System.out.println(p);
+		repo.deleteById(p.getIdproducto());
+		model.addAttribute("lstCa",repocate.findAll());
+		model.addAttribute("lstPro",repo.findAll());
+		return "listadoProductos";
+
 	}
 }

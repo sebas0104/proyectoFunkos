@@ -14,7 +14,7 @@
 		<main>
 			<nav th:replace="principal::nav"></nav>
 			<section style="width: 65%; float: left;">
-				<!-- el  cuerpo -->
+				
 				<h1>Mantenimiento de Personal</h1>
 		<form class="row g-3" action="/personal/grabar" method="POST" th:object="${personal}">
 			<div class="col-md-4">
@@ -89,8 +89,8 @@
 			
 			
 			<div class="col-12">
-				<button class="btn btn-primary" type="submit">Registrar</button>
-				<a  href="/personal/listar" class="btn btn-primary"  >Listado</a>
+				<button class="btn btn-primary" type="submit" style="background-color: silver;">Registrar</button>
+				<a  href="/personal/listar" class="btn btn-primary" style="background-color: silver;" >Listado</a>
 			</div>
 
 		</form>
