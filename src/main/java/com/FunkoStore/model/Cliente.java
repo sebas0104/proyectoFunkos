@@ -5,16 +5,20 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.Data;
+
 
 
 @Entity
+@Data
 @Table(name = "tb_cliente")
 public class Cliente {
+	
 	@Id
 	@Column(name = "cod_cli")
 	private int  idcliente;
 	
-	@Column(name = "cod_cat")
+	@Column(name = "nom_cli")
 	private String nombrecli;
 	
 	@Column(name = "ape_cli")

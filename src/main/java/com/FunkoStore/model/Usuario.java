@@ -5,9 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+
 
 @Entity
 @Table(name = "tb_usuario")
@@ -30,11 +28,11 @@ public class Usuario {
 
 	@Column(name = "fna_usua")
 	private String fechanacimiento;
-	
-	
-	
-	
 
+	
+	
+	
+	
 	@Override
 	public String toString() {
 		return "Usuario [codigo=" + codigo + ", nombre=" + nombre + ", apellidos=" + apellidos + ", correo=" + correo
@@ -90,6 +88,7 @@ public class Usuario {
 	}
 
 
+	
 	
 
 	

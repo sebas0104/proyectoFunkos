@@ -1,20 +1,20 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 
+
 <head th:replace="principal::head">
+<link rel="stylesheet"  href="/css/main.css" >
 </head>
 
-
-
-<body>
-	<div id="container">
+<div id="contenedor">
 
 		<header th:replace="principal::header"> </header>
 		<main>
 			<nav th:replace="principal::nav"></nav>
 			<section style="width: 65%; float: left;">
-				<!-- el  cuerpo -->
+				
 			<h1>Mantenimiento de Productos</h1>
+
 		
 		<form class="row g-3" action="/producto/grabar" method="POST" th:object="${producto}">
 			<div class="col-md-4">
@@ -64,8 +64,8 @@
 			
 			
 			<div class="col-12">
-				<button class="btn btn-primary" type="submit">Registrar</button>
-				<a  href="/producto/listar" class="btn btn-primary"  >Listado</a>
+				<button class="btn btn-primary" type="submit" style="background-color: silver;">Registrar</button>
+				<a  href="/producto/listar" class="btn btn-primary" style="background-color: silver;" >Listado</a>
 			</div>
 
 		</form>	

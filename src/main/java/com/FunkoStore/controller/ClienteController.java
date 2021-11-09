@@ -31,8 +31,7 @@ public class ClienteController {
 		System.out.println("Listo para grabar ");
 		System.out.println(cli);
 		repocli.save(cli);// merge
-		
-		return "crudCliente";
+	    return "crudCliente";
 
 	}
 
@@ -42,10 +41,10 @@ public class ClienteController {
 		return "listadoCliente";
 	}
 
-	@PostMapping("/editar")
-	public String buscarProducto(@ModelAttribute Cliente cli, Model model) {
-		System.out.println(cli);
-		model.addAttribute("producto",repocli.findById(cli.getIdcliente()));
-		return "crudCliente";
-	}
+	//@PostMapping("/editar")
+	//public String buscarProducto(@ModelAttribute Cliente cli, Model model) {
+		//System.out.println(cli);
+		//model.addAttribute("producto",repocli.findById(cli.getIdcliente()));
+		//return "crudCliente";
+	//}
 }

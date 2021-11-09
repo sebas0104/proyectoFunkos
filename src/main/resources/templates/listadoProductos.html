@@ -32,12 +32,12 @@
 	        <td th:text="${p.descripcionpro}"></td>
 	        <td th:text="${p.idcategoria}"></td>
 	        <td th:text="${p.stockpro}"></td>
-	        <td th:text="${p.preciopro}"></td>
+	        <td th:text="${p.preciopro}"></td>					
 	        
 		      <td>
 			      <form action="/producto/editar" method="post">
-			       <input type="hidden" name="codigo" th:value="${p.idproducto}">
-			       <button type="submit" class="btn bnt-info">Editar</button>
+			       <input type="hidden" name="idproducto" th:value="${p.idproducto}">
+			       <button type="submit" class="btn bnt-info">Actualizar</button>
 			       </form>
 		      </td>
    

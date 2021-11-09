@@ -38,7 +38,6 @@ create table tb_producto(
 cod_prod int (5) not null,
 nom_prod varchar(50) not null,
 desc_prod varchar(100) not null,
-img_prod varchar(255) not null,
 cod_cat char(5) not null,
 stock int not null,
 precio decimal(6,2) not null
@@ -54,9 +53,9 @@ create table tb_personal(
 cod_per char(5) not null,
 nom_per varchar(50) not null,
 ape_per varchar(50) not null,
-fec_nac_per date not null,
+fec_nac_per date null,
 email_per varchar(100) not null,
-dni_per char(8) not null,
+dni_per int (8) not null,
 tel_per char(9) not null,
 dir_per varchar(150) not null,
 cod_rol char(5) not null
@@ -160,9 +159,9 @@ insert into tb_rol values('ROL02', 'Vendedor', 'Encargado solo de vender');
 
 
 -- insert tb_personal 
-insert into tb_personal values('001', 'Alvaro James Anthony', 'Javier Reyes', '2001-11-08', 'anthony.tnt.024@gmail.com', '74543018', '928317977', 'Av. Benavides 1223, Primer Piso', 'ROL01');
-insert into tb_personal values('002', 'Sunny', 'Jurado', '1999-11-08', 'sunny@gmail.com', '15975364', '987654321', 'Av. Benavides 1223, Primer Piso', 'ROL02');
-insert into tb_personal values('003', 'Jose', 'Medina', '1999-11-08', 'jose@gmail.com', '45678908', '951357456', 'Av. Benavides 1223, Primer Piso', 'ROL01');
+insert into tb_personal values('001', 'Alvaro James Anthony', 'Javier Reyes', curdate(), 'anthony.tnt.024@gmail.com', 74543018, '928317977', 'Av. Benavides 1223, Primer Piso', 'ROL01');
+insert into tb_personal values('002', 'Sunny', 'Jurado', curdate(), 'sunny@gmail.com', 15975364, '987654321', 'Av. Benavides 1223, Primer Piso', 'ROL02');
+insert into tb_personal values('003', 'Jose', 'Medina', curdate(), 'jose@gmail.com', 45678908, '951357456', 'Av. Benavides 1223, Primer Piso', 'ROL01');
 
 
 -- insert tb_usuario
@@ -201,95 +200,25 @@ insert into tb_categoria values(04, 'DC', 'Superheroes');
 
 
 -- insert tb_producto
-insert into tb_producto values( 01, 'FUNKO Capitan America', 'Superheroes','https://asgardstores.com/252-large_default/funko-pop-capitan-america.jpg',1,'2000','70.00');
-insert into tb_producto values(02, 'FUNKO Iron Man', 'Superheroes','https://assets.frikily.com/wp-content/uploads/2021/02/Funko-Pop-Iron-Man-Guantelete.jpg',1,'2000','70.00');
-insert into tb_producto values( 03, 'FUNKO Spiderman', 'Superheroes','https://asgardstores.com/261-large_default/funko-pop-spiderman.jpg',1,'2000','70.00');
-insert into tb_producto values( 04, 'FUNKO Naruto', 'Nijas','https://phantom.pe/pub/media/catalog/product/cache/71a032b60710d907b279b6023a79a12b/f/u/funko-pop-naruto-shippuden-823-naruto-with-noodles-1_1607917279.jpg',2,'20','70.00');
-insert into tb_producto values(05, 'FUNKO Sasuke', 'Nijas','https://images-na.ssl-images-amazon.com/images/I/41SORCAUA%2BL._SX500_SY500_CR,0,0,500,500_.jpg',2,'2000','70.00');
-insert into tb_producto values(06, 'FUNKO Sakura', 'Nijas','https://images-na.ssl-images-amazon.com/images/I/51aI%2BrMgjoL._AC_SY879_.jpg',2,'2000','70.00');   
-insert into tb_producto values( 07, 'FUNKO Goku', 'Guerreros Z','https://phantom.pe/pub/media/catalog/product/cache/71a032b60710d907b279b6023a79a12b/1/_/1_funko_pop_dragon_ball_1_16.jpg',3,'20','70.00');
-insert into tb_producto values(08, 'FUNKO Gohan', 'Guerreros Z','https://http2.mlstatic.com/D_NQ_NP_667152-MPE42562998471_072020-O.jpg',3,'2000','70.00');
-insert into tb_producto values(09, 'FUNKO Vegeta', 'Guerreros Z','https://cdn.lumingo.com/medias/0100540119-000000000004867879-0-c515Wx515H?context=bWFzdGVyfGltYWdlc3wzNDczMTR8aW1hZ2UvcG5nfGltYWdlcy9oMjAvaGE3Lzk0NTA0NTg0MTUxMzQucG5nfDE5ZDVlMjVmYzNhOTg2Yzg0NjMwZTI4Zjc1MjU1ZTVlNTU3NDBmODI0NTM5NDdiOTA2OWZkY2M0ODg1NDZlOGI',3,'20','70.00');
-insert into tb_producto values(10, 'FUNKO Flash', 'Superheroes','https://cdn.shopify.com/s/files/1/2437/4099/products/7ecf516dd5ee4f959a654a6e114cc3ffxl_1200x1200.jpg?v=1611941496',4,'2000','70.00');
-insert into tb_producto values(11, 'FUNKO Superman', 'Superheroes','https://i.pinimg.com/474x/30/fc/15/30fc156463f2b3a28e484b1b1418f76e.jpg',4,'2000','70.00');
-insert into tb_producto values(12, 'FUNKO Aquaman ', 'Superheroes','https://http2.mlstatic.com/D_NQ_NP_653239-MPE32061568128_092019-O.jpg',4,'2000','70.00');
+insert into tb_producto values( 01, 'FUNKO Capitan America','Superheroes',1,'2000','70.00');
+insert into tb_producto values(02, 'FUNKO Iron Man', 'Superheroes',1,'2000','70.00');
+insert into tb_producto values( 03, 'FUNKO Spiderman', 'Superheroes',1,'2000','70.00');
+insert into tb_producto values( 04, 'FUNKO Naruto', 'Nijas',2,'20','70.00');
+insert into tb_producto values(05, 'FUNKO Sasuke', 'Nijas',2,'2000','70.00');
+insert into tb_producto values(06, 'FUNKO Sakura', 'Nijas',2,'2000','70.00');   
+insert into tb_producto values( 07, 'FUNKO Goku', 'Guerreros Z',3,'20','70.00');
+insert into tb_producto values(08, 'FUNKO Gohan', 'Guerreros Z',3,'2000','70.00');
+insert into tb_producto values(09, 'FUNKO Vegeta', 'Guerreros Z',3,'20','70.00');
+insert into tb_producto values(10, 'FUNKO Flash', 'Superheroes',4,'2000','70.00');
+insert into tb_producto values(11, 'FUNKO Superman', 'Superheroes',4,'2000','70.00');
+insert into tb_producto values(12, 'FUNKO Aquaman ', 'Superheroes',4,'2000','70.00');
 
 -- insert tb_tipo_pago
 insert into tb_tipo_pago values('TP001', 'EFECTIVO', 'PAGO EN EFECTIVO', 'A');
 
 
-drop procedure if exists `usp_validarAcceso`;
-DELIMITER $$
-create procedure `usp_validarAcceso`(user char(10), pass char(10))
-begin
-	select per.* from tb_usuario as usu 
-    inner join tb_personal as per on usu.cod_per = per.cod_per 
-    where usu.user = user and usu.pass = pass limit 1;
-end$$
-DELIMITER ;
-
-drop procedure if exists `usp_listarMenuPorRol`;
-DELIMITER $$
-create procedure `usp_listarMenuPorRol`(codRol varchar(5))
-begin
-	select mn.* from tb_permiso_usuario as pu 
-    inner join tb_menu as mn on pu.cod_menu = mn.cod_menu 
-    where pu.estado = 'A' and mn.estado = 'A' and pu.cod_rol = codRol;
-end$$
-DELIMITER ;
 
 
-drop procedure if exists `usp_listar_clientes`;
-DELIMITER $$
-create procedure `usp_listar_clientes`()
-BEGIN
-select cod_cli,nom_cli,ape_cli,dir_cli,distrito,email_cli,tel_cli  from tb_cliente;
-END $$
-DELIMITER ;
-
-
-drop procedure if exists `usp_lista_producto`;
-DELIMITER $$
-create procedure `usp_lista_producto`()
-BEGIN
-select cod_prod, nom_prod, desc_prod, img_prod, cod_cat, stock, precio, estado from tb_producto ;
-END $$
-DELIMITER ;
-
-
-drop procedure if exists `usp_lista_personal`;
-DELIMITER $$
-create procedure `usp_lista_personal`()
-BEGIN
-select cod_per, nom_per,ape_per,email_per,tel_per,cod_rol,estado from tb_personal ;
-END $$
-DELIMITER ;
-
-call usp_lista_personal;
-
-
-drop procedure if exists `usp_procesarVenta`;
-DELIMITER $$
-create procedure`usp_procesarVenta`(codCli varchar(20), codVend varchar(20), tipoPago varchar(20), total decimal(6,2))
-begin
-    SET SQL_SAFE_UPDATES = 0;
-    
-    insert tb_boleta values(null, codVend, codCli, tipoPago , total, now());
-	select LAST_INSERT_ID();
-end $$
-DELIMITER ;
-
-drop procedure if exists `usp_procesarVentaDetalle`;
-DELIMITER $$
-create procedure`usp_procesarVentaDetalle`(codVenta int,  codProd varchar(20), cant int, precio decimal(6.2))
-begin
-    SET SQL_SAFE_UPDATES = 0;
-    
-    insert tb_deta_boleta values(codVenta, codProd, cant, precio , (cant * precio));
-    update tb_producto set stock = stock - cant where cod_prod = codProd;
-	select LAST_INSERT_ID();
-end $$
-DELIMITER ;
 
 select * from tb_cliente
 ;
