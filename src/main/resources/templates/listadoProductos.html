@@ -12,7 +12,7 @@
 <body>
 
 	<div class="container">
-		<h1>Listado de Productos</h1>
+		<h1 style="text-align: center;">Listado de Productos</h1>
 		<table class="table table-hover">
     <thead class="thead-dark">
       <tr>
@@ -27,7 +27,9 @@
     </thead>
     <tbody>
       <tr th:each="p : ${lstPro}">
-	        <td th:text="${p.idproducto}"></td>
+	      <!-- <td th:text="${p.idproducto}"></td> -->  
+	       <td><img alt="" 
+	            th:src="@{${'/img/Funko/'+p.idproducto+'.jpg'}}"width="200px"> </td>
 	        <td th:text="${p.nombrepro}"></td>
 	        <td th:text="${p.descripcionpro}"></td>
 	        <td th:text="${p.idcategoria}"></td>
