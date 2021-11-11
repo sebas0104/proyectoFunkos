@@ -28,6 +28,11 @@ public class ProductosController {
 		model.addAttribute("lstCa",repocate.findAll());
 		return "crudproductos";
 	}
+	
+	@GetMapping("/cargarinicio")
+	public String cargarpaginicio(Model model) {
+				return "principal";
+	}
 
 
 	@PostMapping("/grabar")
@@ -64,5 +69,12 @@ public class ProductosController {
 		model.addAttribute("lstPro",repo.findAll());
 		return "listadoProductos";
 
+	}
+	
+	@GetMapping("/actualizar")
+	public String Actualizarproductos(producto p ) {
+		repo.save(p);// merge
+		return "listadoProductos";
+		
 	}
 }
