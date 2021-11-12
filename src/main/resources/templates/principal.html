@@ -13,14 +13,14 @@
 
 <div id="contenedor">
 		<header th:fragment="header">
-			<img alt="logo" th:src="@{/img/FunkoStore-circle.png}"  width="200" height="200">
+			<img alt="logo" th:src="@{/img/funko.png}"  width="200" height="200">
 			
 		</header>
 			
 		<main>
-			<nav style="width: 25%;float: left;"  th:fragment="nav" >
+			<nav style="width: 25%;float: left;" th:fragment="nav" >
 				<ul>
-					<li><a href="#">Inicio</a></li>				
+					<li><a href="/producto/cargarinicio">Inicio</a></li>				
 					<li><a href="/producto/cargar">Mantenimiento de productos</a></li>
 					<li><a href="/personal/cargar">Mantenimiento de Personal</a></li>
 					<li><a href="/cliente/cargar">Mantenimiento de clientes</a></li>
@@ -28,7 +28,33 @@
 				</ul>
 			</nav>
 			<section style="width: 65%;float: left;">
-				<h1 style="font-size: 250%;" >Bienvenidos</h1>
+				<h1 style="top: auto; " >Bienvenidos</h1>
+				<br>
+				 <h3 style="text-align: center;font-weight: bold; "> VISION</h3>
+				<p >
+    Ofrecer a nuestros clientes  productos de calidad, a precios cómodos  
+   que cumplan con sus necesidades y exigencias, abarcando sus gustos de acuerdo a 
+    su estilo de ver y vivir la vida.</p>
+    
+    
+     <h3 style="text-align: center;font-weight: bold; "> MISION</h3>
+				<p >
+    Ofrecer a nuestros clientes  productos de calidad, a precios cómodos  
+   que cumplan con sus necesidades y exigencias, abarcando sus gustos de acuerdo a 
+    su estilo de ver y vivir la vida.</p>
+    
+    
+    <h3> Ingredientes</h3>
+    
+    <p>- Una pisca de estefani</p>
+    <p>- Una cucharada  de jose</p>
+    <p>- 100 gramos de sebastian</p>
+    <p>- 1/2 taza de luis</p>
+    <p>- 3 barras de sunny</p>
+    
+    
+     
+
 			</section>
 		</main>
 		<footer th:fragment="footer">

@@ -41,10 +41,12 @@ public class ClienteController {
 		return "listadoCliente";
 	}
 
-	//@PostMapping("/editar")
-	//public String buscarProducto(@ModelAttribute Cliente cli, Model model) {
-		//System.out.println(cli);
-		//model.addAttribute("producto",repocli.findById(cli.getIdcliente()));
-		//return "crudCliente";
-	//}
+	@PostMapping("/editar")
+	public String buscarProducto(@ModelAttribute Cliente cli, Model model) {
+		
+	System.out.println("----- Editar-----");
+	System.out.println(cli);
+	model.addAttribute("cliente",repocli.findById(cli.getIdcliente()));
+	return "crudCliente";
+	}
 }
