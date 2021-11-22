@@ -71,10 +71,5 @@ public class ProductosController {
 
 	}
 	
-	@GetMapping("/actualizar")
-	public String Actualizarproductos(producto p ) {
-		repo.save(p);// merge
-		return "listadoProductos";
-		
-	}
+
 }
