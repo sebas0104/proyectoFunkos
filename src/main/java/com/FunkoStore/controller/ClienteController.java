@@ -47,6 +47,16 @@ public class ClienteController {
 	System.out.println("----- Editar-----");
 	System.out.println(cli);
 	model.addAttribute("cliente",repocli.findById(cli.getIdcliente()));
-	return "crudCliente";
+	return "actualizarcliente";
+	}
+	
+	@PostMapping("/eliminar")
+	public String eliminarlibro(@ModelAttribute Cliente cli, Model model) {
+		System.out.println("Listo para eliminar ");
+		System.out.println(cli.toString());
+		repocli.deleteById(cli.getIdcliente());
+		model.addAttribute("lstCli",repocli.findAll());
+		return "listadoCliente";
+	
 	}
 }
