@@ -51,7 +51,7 @@ public class ProductosController {
 	}
 		
 	
-	@PostMapping("/editar")
+	@PostMapping("/Actualizar")
 	public String buscarProducto(@ModelAttribute producto p, Model model) {
 		System.out.println(p);
 		model.addAttribute("producto",repo.findById(p.getIdproducto()));
@@ -71,5 +71,14 @@ public class ProductosController {
 
 	}
 	
-
+	
+	
+	@PostMapping("/editar")
+	public String grabarpag2(@ModelAttribute producto producto,Model model) {
+		System.out.println("Listo para grabar ");
+		System.out.println(producto);
+		repo.save(producto);// merge
+		model.addAttribute("lstCa",repocate.findAll());
+		return "crudproductos";
+	}
 }

@@ -16,7 +16,7 @@
 			<h1>Actualizar  Productos</h1>
 
 		
-		<form class="row g-3" action="/producto/eliminar" method="POST" th:object="${producto}">
+		<form class="row g-3" action="/producto/editar" method="POST" th:object="${producto}">
 			<div class="col-md-4">
 				<label for="validationDefault01" class="form-label">Codigo del Producto</label>
 				<input type="text" th:field="*{idproducto}" class="form-control" id="validationDefault01"
@@ -63,13 +63,14 @@
 			</div>
 			
 			
-			<div class="col-12">
 			
-				<button class="btn btn-primary" type="submit">Eliminar</button>
-			<a  href="/producto/actualizar"   method="GET" class="btn btn-primary" >actualizar</a>
+			
+			<div class="col-12">
+			<button type="submit" class="btn btn-info">actualizar</button>
 			</div>
-
+                           
 		</form>	
+		
 			</section>
 
 

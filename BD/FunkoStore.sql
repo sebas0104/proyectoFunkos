@@ -36,8 +36,8 @@ desc_cat varchar(100) not null
 
 create table tb_producto(
 cod_prod int (5) not null,
-nom_prod varchar(50) not null,
-desc_prod varchar(100) not null,
+nom_prod varchar(50) ,
+desc_prod varchar(100) ,
 cod_cat char(5) not null,
 stock int not null,
 precio decimal(6,2) not null
@@ -159,9 +159,11 @@ insert into tb_rol values('ROL02', 'Vendedor', 'Encargado solo de vender');
 
 
 -- insert tb_personal 
-insert into tb_personal values('001', 'Alvaro James Anthony', 'Javier Reyes', curdate(), 'anthony.tnt.024@gmail.com', 74543018, '928317977', 'Av. Benavides 1223, Primer Piso', 'ROL01');
+insert into tb_personal values('001', 'Luis', 'Pereda', curdate(), 'luis@gmail.com', 74543018, '928317977', 'Av. Benavides 1223, Primer Piso', 'ROL01');
 insert into tb_personal values('002', 'Sunny', 'Jurado', curdate(), 'sunny@gmail.com', 15975364, '987654321', 'Av. Benavides 1223, Primer Piso', 'ROL02');
 insert into tb_personal values('003', 'Jose', 'Medina', curdate(), 'jose@gmail.com', 45678908, '951357456', 'Av. Benavides 1223, Primer Piso', 'ROL01');
+insert into tb_personal values('004', 'Stephanie', 'Lindegger', curdate(), 'Stephanie@gmail.com', 45678908, '951357456', 'Av. Benavides 1223, Primer Piso', 'ROL01');
+insert into tb_personal values('005', 'Sebastian', 'Aranda', curdate(), 'sebastian@gmail.com', 45678908, '951357456', 'Av. Benavides 1223, Primer Piso', 'ROL01');
 
 
 -- insert tb_usuario
@@ -220,5 +222,5 @@ insert into tb_tipo_pago values('TP001', 'EFECTIVO', 'PAGO EN EFECTIVO', 'A');
 
 
 
-select * from tb_cliente
+select * from tb_personal
 ;

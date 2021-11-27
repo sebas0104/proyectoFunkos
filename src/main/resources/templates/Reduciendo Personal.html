@@ -15,7 +15,7 @@
 			<nav th:replace="principal::nav"></nav>
 			<section style="width: 65%; float: left;">
 				
-				<h1>Actualizar de Personal</h1>
+				<h1> Reduciendo Personal</h1>
 		<form class="row g-3" action="/personal/eliminar" method="POST" th:object="${personal}">
 			<div class="col-md-4">
 				<label for="validationDefault01" class="form-label">Codigo del Personal</label>
@@ -90,7 +90,6 @@
 			
 			<div class="col-12">
 				<button class="btn btn-primary" type="submit">eliminar</button>
-				<a  href="/personal/listar" class="btn btn-primary"  >actualizar</a>
 			</div>
 
 		</form>

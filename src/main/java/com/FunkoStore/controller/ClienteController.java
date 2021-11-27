@@ -47,7 +47,7 @@ public class ClienteController {
 	System.out.println("----- Editar-----");
 	System.out.println(cli);
 	model.addAttribute("cliente",repocli.findById(cli.getIdcliente()));
-	return "actualizarcliente";
+	return "ReduciendoCliente";
 	}
 	
 	@PostMapping("/eliminar")

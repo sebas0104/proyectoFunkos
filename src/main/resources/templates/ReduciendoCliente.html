@@ -14,7 +14,7 @@
 			<nav th:replace="principal::nav"></nav>
 			<section style="width: 65%; float: left;">
 				
-				<h1>Mantenimiento de Clientes</h1>
+				<h1>Reduciendo  Clientes</h1>
 		<form class="row g-3" action="/cliente/eliminar" method="POST" th:object="${cliente}">
 			<div class="col-md-4">
 				<label for="validationDefault01" class="form-label">Codigo del Cliente</label>
@@ -82,7 +82,6 @@
 			
 			<div class="col-12">
 			<button class="btn btn-primary" type="submit">Eliminar</button>
-			<a  href="/cliente/listar" class="btn btn-primary" >Actualizar</a>
 			</div>
 
 		</form>

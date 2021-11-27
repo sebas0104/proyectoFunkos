@@ -48,7 +48,7 @@ public class PersonalControler {
 		System.out.println(per);
 		model.addAttribute("personal", repoper.findById(per.getIdpersonal()));
 		model.addAttribute("lstro", reporol.findAll());
-		return "actualizarPersonal";
+		return "Reduciendo Personal";
 	}
 
 	@PostMapping("/eliminar")
