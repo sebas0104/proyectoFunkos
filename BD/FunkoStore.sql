@@ -220,7 +220,3 @@ insert into tb_tipo_pago values('TP001', 'EFECTIVO', 'PAGO EN EFECTIVO', 'A');
 
 
 
-
-
-select * from tb_personal
-;
