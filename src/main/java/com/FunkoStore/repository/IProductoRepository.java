@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.FunkoStore.model.producto;
 
 @Repository
-public interface IProductoRepository extends JpaRepository<producto, Integer> {
+public interface IProductoRepository extends JpaRepository<producto, String> {
 
 }

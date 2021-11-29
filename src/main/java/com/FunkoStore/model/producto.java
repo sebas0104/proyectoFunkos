@@ -14,7 +14,7 @@ import lombok.Data;
 public class producto {
     @Id
     @Column(name = "cod_prod")
-	private int  idproducto;
+	private String  idproducto;
     
     @Column(name = "nom_prod")
 	private String nombrepro;
@@ -31,11 +31,11 @@ public class producto {
     @Column(name = "precio")
 	private double preciopro;
 
-	public int getIdproducto() {
+	public String getIdproducto() {
 		return idproducto;
 	}
 
-	public void setIdproducto(int idproducto) {
+	public void setIdproducto(String idproducto) {
 		this.idproducto = idproducto;
 	}
 

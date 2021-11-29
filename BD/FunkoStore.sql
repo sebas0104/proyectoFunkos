@@ -29,13 +29,13 @@ estado char(1) not null
 );
 
 create table tb_categoria(
-cod_cat varchar(5) not null,
+cod_cat char(5) not null,
 nom_cat varchar(50) not null,
 desc_cat varchar(100) not null
 );
 
 create table tb_producto(
-cod_prod int (5) not null,
+cod_prod char(5) not null,
 nom_prod varchar(50) ,
 desc_prod varchar(100) ,
 cod_cat char(5) not null,
@@ -202,21 +202,25 @@ insert into tb_categoria values(04, 'DC', 'Superheroes');
 
 
 -- insert tb_producto
-insert into tb_producto values( 01, 'FUNKO Capitan America','Superheroes',1,'2000','70.00');
-insert into tb_producto values(02, 'FUNKO Iron Man', 'Superheroes',1,'2000','70.00');
-insert into tb_producto values( 03, 'FUNKO Spiderman', 'Superheroes',1,'2000','70.00');
-insert into tb_producto values( 04, 'FUNKO Naruto', 'Nijas',2,'20','70.00');
-insert into tb_producto values(05, 'FUNKO Sasuke', 'Nijas',2,'2000','70.00');
-insert into tb_producto values(06, 'FUNKO Sakura', 'Nijas',2,'2000','70.00');   
-insert into tb_producto values( 07, 'FUNKO Goku', 'Guerreros Z',3,'20','70.00');
-insert into tb_producto values(08, 'FUNKO Gohan', 'Guerreros Z',3,'2000','70.00');
-insert into tb_producto values(09, 'FUNKO Vegeta', 'Guerreros Z',3,'20','70.00');
-insert into tb_producto values(10, 'FUNKO Flash', 'Superheroes',4,'2000','70.00');
-insert into tb_producto values(11, 'FUNKO Superman', 'Superheroes',4,'2000','70.00');
-insert into tb_producto values(12, 'FUNKO Aquaman ', 'Superheroes',4,'2000','70.00');
+insert into tb_producto values( 01, 'FUNKO Capitan America','Superheroes',1,'20','70.00');
+insert into tb_producto values(02, 'FUNKO Iron Man', 'Superheroes',1,'12','70.00');
+insert into tb_producto values( 03, 'FUNKO Spiderman', 'Superheroes',1,'1','70.00');
+insert into tb_producto values( 04, 'FUNKO Naruto', 'Nijas',2,'3','70.00');
+insert into tb_producto values(05, 'FUNKO Sasuke', 'Nijas',2,'12','70.00');
+insert into tb_producto values(06, 'FUNKO Sakura', 'Nijas',2,'3','70.00');   
+insert into tb_producto values( 07, 'FUNKO Goku', 'Guerreros Z',3,'25','70.00');
+insert into tb_producto values(08, 'FUNKO Gohan', 'Guerreros Z',3,'24','70.00');
+insert into tb_producto values(09, 'FUNKO Vegeta', 'Guerreros Z',3,'11','70.00');
+insert into tb_producto values(10, 'FUNKO Flash', 'Superheroes',4,'1','70.00');
+insert into tb_producto values(11, 'FUNKO Superman', 'Superheroes',4,'6','70.00');
+insert into tb_producto values(12, 'FUNKO Aquaman ', 'Superheroes',4,'15','70.00');
 
 -- insert tb_tipo_pago
 insert into tb_tipo_pago values('TP001', 'EFECTIVO', 'PAGO EN EFECTIVO', 'A');
 
 
-
+select c.nom_cat as categoria ,count(*) as producto,sum(stock) as total,max(stock) as mayor_stock, min(stock) as menor_stock
+from tb_producto as p
+inner join tb_categoria as c
+on p.cod_cat= c.cod_cat
+group by c.cod_cat
