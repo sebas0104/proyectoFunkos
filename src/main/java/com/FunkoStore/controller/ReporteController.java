@@ -18,26 +18,26 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-@RestController
-public class ReporteController {
 
+
+@RestController
+
+public class ReporteController {
+	
 	@Autowired
 	private DataSource dataSource;
-
 	@RequestMapping("/{reportName}")
 	public void demoReport1(@PathVariable("reportName") final String reportName,
-			@RequestParam(required = false) Map<String, Object> parameters, HttpServletResponse response,
-			HttpServletRequest request) throws Exception {
-		parameters = parameters == null ? new HashMap<>() : parameters;
-		ClassPathResource resource = new ClassPathResource("reportes" + File.separator + reportName + ".jasper");
-		InputStream jasperStream = resource.getInputStream();
-		JasperReport jasperReport = (JasperReport) JRLoader.loadObject(jasperStream);
-		JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, parameters, dataSource.getConnection());
-		response.setContentType("application/pdf");
-		response.setHeader("Content-Disposition", "inline;");
-		final OutputStream outputStream = response.getOutputStream();
-		JasperExportManager.exportReportToPdfStream(jasperPrint, outputStream);
-
+	@RequestParam(required = false) Map<String, Object> parameters,
+	HttpServletResponse response, HttpServletRequest request) throws Exception{
+	parameters = parameters == null ? new HashMap<>() : parameters;
+	ClassPathResource resource = new ClassPathResource("reportefunko" + File.separator + reportName + ".jasper");
+	InputStream jasperStream = resource.getInputStream();
+	JasperReport jasperReport = (JasperReport) JRLoader.loadObject(jasperStream);
+	JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, parameters, dataSource.getConnection());
+	response.setContentType("application/pdf");
+	response.setHeader("Content-Disposition", "inline;");
+	final OutputStream outputStream = response.getOutputStream();
+	JasperExportManager.exportReportToPdfStream(jasperPrint, outputStream);
 	}
-	
 }
